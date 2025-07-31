@@ -5,13 +5,7 @@ body {
     line-height: 1.6;
     color: #333;
 
-    /* Centrar el contenido de la página */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Asegura que el contenido ocupe toda la altura de la ventana */
-    padding: 20px; /* Un poco de espacio alrededor del contenido */
-    
+
 }
 
 /* El main es el contenedor principal del CV, lo usamos para limitar su ancho y darle un estilo más de "documento" */
