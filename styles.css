@@ -1,10 +1,26 @@
 body {
+    /* Estilos para el fondo blanco y centrado */
+    background-color: #ffffff; /* Color de fondo blanco */
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
     color: #333;
+
+    /* Centrar el contenido de la página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Asegura que el contenido ocupe toda la altura de la ventana */
+    padding: 20px; /* Un poco de espacio alrededor del contenido */
+    
+}
+
+/* El main es el contenedor principal del CV, lo usamos para limitar su ancho y darle un estilo más de "documento" */
+main {
+    max-width: 800px; /* Limita el ancho del contenido para que no se vea demasiado estirado */
+    width: 100%;
+    background-color: #fff; /* Fondo blanco para el contenido del CV */
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para que se vea como una hoja de papel */
 }
 
 header {
