@@ -1,22 +1,306 @@
+/* Estilos generales del cuerpo y fuente */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
 }
 
-header {
+/* Encabezado de la página (la barra azul) */
+.header-nav {
+    position: fixed;
+    top: 0;          /* Lo fija en la parte superior de la ventana del navegador */
+    width: 100%;     /* Asegura que ocupe todo el ancho de la pantalla */
+    z-index: 1000;   /* Asegura que esté por encima de otros elementos en la página */
+    background-color: #213a69;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header-nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+}
+
+.header-nav .nav-links a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+.header-nav .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.header-nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #213a69;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.header-nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.header-nav .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    margin-left: 0;
+}
+
+.header-nav .dropdown-content a:hover {
+    background-color: #31508a;
+}
+
+/* Sección principal del CV */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 7rem 2rem;
+    gap: 3rem;
+}
+
+/* Columna de la izquierda (foto y enlaces) */
+.left-column {
     text-align: center;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #ccc;
 }
 
-h1 {
+.profile-picture {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.job-title {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 0.2rem 0;
+}
+
+.link-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.link-list a {
+    display: block;
+    text-decoration: none;
+    color: #0056b3;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.social-links a:hover {
     color: #0056b3;
 }
 
-section {
-    margin-bottom: 30px;
+/* Columna de la derecha (contenido principal del CV) */
+.right-column {
+    flex: 1;
+    max-width: 900px;
+}
+
+.intro {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.about-me {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    max-width: 700px; /* Para que el texto no se estire demasiado */
+}
+
+.cv-section {
+    margin-bottom: 2rem;
+}
+
+.cv-section h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.cv-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cv-section li {
+    margin-bottom: 0.5rem;
+}
+
+.cv-section a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+/* Sección de "Proyectos de Data Science" */
+.experience-section {
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff;
+}
+
+
+.projects-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Media Queries para diseño responsive en móviles y tablets */
+@media (max-width: 768px) {
+    .header-nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+    .header-nav .nav-links {
+        margin-top: 1rem;
+    }
+    .header-nav .nav-links a {
+        margin: 0 0.5rem;
+    }
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+    }
+    .left-column, .right-column {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+/* Estilo para la sección de proyectos */
+.projects-section {
+    padding: 2rem 0; /* Espacio superior e inferior */
+    text-align: center; /* Centra el título H2 */
+}
+
+.projects-section h2 {
+    margin-bottom: 2rem; /* Espacio debajo del título */
+}
+
+/* Contenedor que organiza los proyectos en columnas */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea en pantallas pequeñas */
+    justify-content: center; /* Centra los proyectos si hay espacio extra */
+    gap: 2rem; /* Espacio entre los proyectos */
+}
+
+/* Estilo para cada "tarjeta" de proyecto */
+.project-card {
+    width: 45%; /* Cada columna ocupa el 45% del ancho del contenedor */
+    max-width: 400px; /* Ancho máximo para que no se estiren demasiado */
+    background-color: #fff;
+    border: 1px solid #ddd; /* Contorno sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    overflow: hidden; /* Asegura que la imagen no se salga de los bordes redondeados */
+    text-align: left;
+    transition: transform 0.3s ease; /* Efecto de transición al pasar el mouse */
+}
+
+/* Efecto al pasar el mouse por encima del proyecto */
+.project-card:hover {
+    transform: translateY(-5px); /* Se eleva un poco */
+}
+
+/* Estilo de la imagen del proyecto */
+.project-image {
+    width: 100%;
+    height: 200px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Recorta la imagen para que se ajuste sin distorsionarse */
+    display: block; /* Elimina el espacio extra debajo de la imagen */
+}
+
+/* Estilo para la información del proyecto */
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #0056b3;
+}
+
+.project-info p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Estilo para el enlace del proyecto */
+.project-info a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-info a:hover {
+    text-decoration: underline;
+}
+
+/* Media query para pantallas más pequeñas (una sola columna) */
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center; /* Centra las tarjetas cuando son una sola columna */
+    }
+    .project-card {
+        width: 90%; /* Ocupa casi todo el ancho disponible */
+    }
 }

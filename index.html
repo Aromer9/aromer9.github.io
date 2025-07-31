@@ -8,31 +8,89 @@
     </head>
 <body>
 
-    <header>
-        <h1>Aldo Romero Velásquez</h1>
-        <p>Magister en tecnologías de la información</p>
-        <p>
-            <a href="mailto:[concatacto@nomadschile.com]">[contacto@nomadschile.com]</a> | 
-            [Santiago, Chile] |
-            <a href="[https://www.linkedin.com/in/aldo-romero-vel/]" target="_blank">LinkedIn</a> |
-            <a href="[https://github.com/Aromer9]" target="_blank">GitHub</a>
-        </p>
+    <header class="header-nav" >
+        <span class="logo" >Aldo Romero</span>
+        <div class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="CV.pdf">CV</a>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section id="resumen">
-            <h2>Resumen Profesional</h2>
-            <p>
-                Profesional con más de una década de experiencia liderando la transformación basada en datos, desde la manipulación y análisis de información hasta la implementación de soluciones de Machine Learning e Inteligencia Artificial. Impulso la cultura de datos en las organizaciones, optimizando la toma de decisiones con evidencia y generando resultados tangibles a través de la analítica avanzada. Especialista en diseño e implementación de modelos predictivos, gestión de proyectos analíticos complejos y mentoring de equipos de alto rendimiento. 
-            </p>
+    <main id="inicio">
+        <section class="main-content">
+            <div class="left-column">
+                <img src="logo.jpeg" alt="Foto de perfil" class="profile-picture">
+                <h1 class="name">Aldo Romero Velásquez</h1>
+                <p class="job-title">Founder @Nomads Lab, Data & Analytics Lead</p>
+                </div>
+
+            <div class="right-column">
+                <p class="intro">Hola</p>
+                <p class="about-me">Soy Magister TI con más de una década de experiencia liderando la transformación basada en datos, desde la manipulación y análisis de información hasta la implementación de soluciones de Machine Learning e Inteligencia Artificial. Impulso la cultura de datos en las organizaciones, optimizando la toma de decisiones con evidencia y generando resultados tangibles a través de la analítica avanzada. Especialista en diseño e implementación de modelos predictivos, gestión de proyectos analíticos complejos y mentoring de equipos de alto rendimiento.</p>
+
+                <div class="cv-section">
+                    <h2>Intereses</h2>
+                    <ul>Analítica</ul>
+                    <ul>Ingeniería de datos</ul>
+                    <ul>Aprendizaje profundo</ul>
+                </div>
+                
+                <div class="cv-section">
+                    <h2>Educación</h2>
+                    <ul>Magister Tecnologías de la información - Universidad de Chile</ul>
+                    <ul>Diplomado en Ciencia e Ingeniería de datos - Universidad de Chile</ul>
+                    <ul>Diplomado en Inteligencia artificial - Universidad de Chile</ul>
+                    <ul>Ingeniero Comercial - Universidad Gabriela mistral</ul>
+                    <ul>Ingeniero en computación e informática - Instituto profesional la Araucana</ul>
+                </div>
+            </div>
         </section>
 
-        <section id="experiencia">
+        <section class="projects-section" id="proyectos">
+            <h2>Proyectos</h2>
+        
+
+            <div class="projects-container">
+                
+                <div class="project-card">
+                    <img src="p1.jpg" alt="Descripción del proyecto 1" class="project-image">
+                    <div class="project-info">
+                        <h3>Quiebres de stock en retail</h3>
+                        <p>Este proyecto nace dada la necesidad de que cada marca debe conocer los quierbres de stock en portales Ecommerce, de manera de mejorar indicadores de venta perdida. La tecnología utilizada es Python, Framework Streamlit, Docker, Google Cloud Platform, MySQL</p>
+                        <a href="https://appscrapingoutofstock-696210113710.southamerica-west1.run.app/" target="_blank">Ver Proyecto</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="p2.png" alt="Descripción del proyecto 2" class="project-image">
+                    <div class="project-info">
+                        <h3>Predicción Niveles de tiempos en caja, aplicado a retail</h3>
+                        <p>Proyecto de tésis para optar al magister TI de la Universidad de Chile, consiste en la aplicación de modelo de teoría de colas a 3 tiendas del retail. Posteriormente se aplicaron modelos de regresión para predecir los niveles futuros. La tecnología utilizada es Python, Google Colab, Google Cloud Platform</p>
+                        <a href="https://repositorio.uchile.cl/handle/2250/204488" target="_blank">Ver Proyecto</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="p3.jpg" alt="Descripción del proyecto 2" class="project-image">
+                    <div class="project-info">
+                        <h3>Gestión de mercadería en empresa gastronomica</h3>
+                        <p>Este proyecto nace dada la necesidad de realizar un correcto cálculo de costos y margenes de cada receta de una empresa gastronomica, de manera de tener precios competitivos que no sacrifiquen rentabilidad. También, se elaboró una propuesta de precio de venta sugerido. La tecnología utilizada es Python, Framework Streamlit, Docker, Google Cloud Platform, MySQL</p>
+                        <a href="https://appastronomica-696210113710.southamerica-west1.run.app/" target="_blank">Ver Proyecto</a>
+                    </div>
+                </div>
+        </section>
+
+
+        <section id="experiencia" class="projects-section">
             <h2>Experiencia Laboral</h2>
-            
+ 
             <div class="puesto">
                 <h3>Fundador - NOMADSLAB</h3>
-                <p>[Santiago, Chile] | [Junio 2024] - [Presente]</p>
+                <p>Santiago, Chile | Junio 2024 - Presente</p>
                 <ul>
             
                 </ul>
@@ -40,7 +98,7 @@
 
             <div class="puesto">
                 <h3>Business Analytics Lead - SOFTYS CHILE</h3>
-                <p>[Santiago, Chile] | [Mayo 2024] - [Junio 2025]</p>
+                <p>Santiago, Chile | Mayo 2024 - Junio 2025</p>
                 <ul>
                 
                 </ul>
@@ -48,7 +106,7 @@
 
             <div class="puesto">
                 <h3>Líder analytics & BI - WALMART CHILE</h3>
-                <p>[Santiago, Chile] | [Febrero 2022] - [Mayo 2024]</p>
+                <p>Santiago, Chile | Febrero 2022 - Mayo 2024</p>
                 <ul>
                 
                 </ul>
@@ -56,7 +114,7 @@
 
             <div class="puesto">
                 <h3>Data Analytics Senior - WALMART CHILE</h3>
-                <p>[Santiago, Chile] | [Septiembre 2020] - [Febrero 2022]</p>
+                <p>Santiago, Chile | Septiembre 2020 - Febrero 2022</p>
                 <ul>
                     
                 </ul>
@@ -64,7 +122,7 @@
 
             <div class="puesto">
                 <h3>Data Analytics - WALMART CHILE</h3>
-                <p>[Santiago, Chile] | [Enero 2019] - [Agosto 2020]</p>
+                <p>Santiago, Chile | Enero 2019 - Agosto 2020</p>
                 <ul>
                     
                 </ul>
@@ -72,7 +130,7 @@
 
             <div class="puesto">
                 <h3>Account Manager - WALMART CHILE</h3>
-                <p>[Santiago, Chile] | [Septiembre 2017] - [Enero 2019]</p>
+                <p>Santiago, Chile | Septiembre 2017 - Enero 2019</p>
                 <ul>
                     
                 </ul>
@@ -80,7 +138,7 @@
 
             <div class="puesto">
                 <h3>Analista inteligencia de clientes - WALMART CHILE</h3>
-                <p>[Santiago, Chile] | [Enero 2015] - [Septiembre 2017]</p>
+                <p>Santiago, Chile | Enero 2015 - Septiembre 2017</p>
                 <ul>
                     
                 </ul>
@@ -88,37 +146,11 @@
 
         </section>
 
-        <section id="educacion">
-            <h2>Educación</h2>
-            <div class="estudio">
-                <h3>[Nombre de tu Grado o Título]</h3>
-                <p>[Nombre de la Universidad o Institución] | [Ciudad, País] | [Año de Graduación]</p>
-            </div>
-            </section>
-
-        <section id="habilidades">
-            <h2>Habilidades</h2>
-            <ul>
-                <li><strong>Idiomas de Programación:</strong> [Ejemplo: JavaScript, Python, Java]</li>
-                <li><strong>Frameworks y Librerías:</strong> [Ejemplo: React, Node.js, Django]</li>
-                <li><strong>Bases de Datos:</strong> [Ejemplo: SQL, MongoDB]</li>
-                <li><strong>Herramientas:</strong> [Ejemplo: Git, Docker, JIRA]</li>
-                <li><strong>Habilidades Blandas:</strong> [Ejemplo: Trabajo en equipo, Comunicación, Resolución de problemas]</li>
-            </ul>
-        </section>
-        
-        <section id="proyectos">
-            <h2>Proyectos Personales</h2>
-            <div class="proyecto">
-                <h3><a href="[url-del-proyecto]" target="_blank">[Nombre del Proyecto]</a></h3>
-                <p>[Descripción breve del proyecto. Explica qué hace y qué tecnologías utilizaste.]</p>
-            </div>
-            </section>
-        
     </main>
 
+
     <footer>
-        <p>&copy; [Año Actual] [Tu Nombre]. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Aldo Romero. Todos los derechos reservados.</p>
     </footer>
 
 </body>
