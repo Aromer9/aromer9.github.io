@@ -311,7 +311,7 @@ body {
     transition: 0.3s;
 }
 
-/* Media Queries para diseño responsive en móviles y tablets */
+/* El diseño de Grid ya es responsive, pero mantenemos este media query como fallback si es necesario */
 @media (max-width: 768px) {
     .hamburger-menu {
         display: flex;
@@ -326,24 +326,20 @@ body {
     
     .nav-links {
         position: fixed;
-        top: 100%;
+        top: 70px;
         left: 0;
         width: 100%;
         background-color: #1a0017;
         flex-direction: column;
         gap: 0;
-        transform: translateY(-100%);
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
+        display: none;
         padding: 1rem 0;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 999;
     }
     
     .nav-links.active {
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
+        display: flex;
     }
     
     .header-nav .nav-links a {
