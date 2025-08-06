@@ -10,12 +10,18 @@
 
 <header class="header-nav">
   <span class="logo">aromer9</span>
+  <button class="hamburger-menu" aria-label="Menú de navegación">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
   <div class="nav-links">
     <a href="#inicio">Inicio</a>
     <a href="#proyectos">Proyectos</a>
-    <a href="#experiencia">Experiencia</a>
     <a href="CV.pdf">CV</a>
-    
+    <a href="https://github.com/Aromer9" target="_blank" class="github-link" aria-label="GitHub">
+        <svg height="24" width="24" viewBox="0 0 16 16" fill="currentColor" style="vertical-align:middle;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+    </a>
   </div>
 </header>
 
@@ -29,9 +35,11 @@
 
                 <div class="cv-section">
                     <h2>Intereses</h2>
-                    <ul>Analítica</ul>
-                    <ul>Ingeniería de datos</ul>
-                    <ul>Aprendizaje profundo</ul>
+                    <ul class="intereses-list">
+                        <li>Analítica</li>
+                        <li>Ingeniería de datos</li>
+                        <li>Aprendizaje profundo</li>
+                    </ul>
                 </div>
                 
             </div>
@@ -44,11 +52,13 @@
                 
                 <div class="cv-section">
                     <h2>Educación</h2>
-                    <ul>Magister Tecnologías de la información - Universidad de Chile</ul>
-                    <ul>Diplomado en Ciencia e Ingeniería de datos - Universidad de Chile</ul>
-                    <ul>Diplomado en Inteligencia artificial - Universidad de Chile</ul>
-                    <ul>Ingeniero Comercial - Universidad Gabriela mistral</ul>
-                    <ul>Ingeniero en computación e informática - Instituto profesional la Araucana</ul>
+                    <ul>
+                        <li>Magister Tecnologías de la información - Universidad de Chile</li>
+                        <li>Diplomado en Ciencia e Ingeniería de datos - Universidad de Chile</li>
+                        <li>Diplomado en Inteligencia artificial - Universidad de Chile</li>
+                        <li>Ingeniero Comercial - Universidad Gabriela mistral</li>
+                        <li>Ingeniero en computación e informática - Instituto profesional la Araucana</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -111,7 +121,7 @@
                     <div class="project-info">
                         <h3>Implementación de Chatbot con OpenAI, PandasAI y Langchain </h3>
                         <p>Este proyecto se realiza para explorar las diversas alternativas de Chatbot y agentes que existen y evaluar su alcance. Este proyecto se disponibiliza a través de Streamlit, posee un motor de base de datos MySQL para llevar registro de las preguntas y respuestas. Se utiliza Python y se implementan librerías OpenAI, PandasAI y Langchain</p>
-                        <a href="https://appastronomica-696210113710.southamerica-west1.run.app/" target="_blank">Ver Proyecto</a>
+                        <a href="https://alfredlangchain-production.up.railway.app/" target="_blank">Ver Proyecto</a>
                     </div>
                 </div>
         </section>
@@ -125,6 +135,23 @@
     <footer>
         <p>&copy; 2025 Aldo Romero. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        // Funcionalidad del menú hamburguesa
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 
 </body>
 </html>

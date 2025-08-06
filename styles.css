@@ -175,6 +175,22 @@ body {
 
 .cv-section li {
     margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+/* Icono de graduación solo para educación */
+.cv-section li::before {
+    content: "🎓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.1rem;
+}
+
+/* Icono de estrella solo para intereses */
+.intereses-list li::before {
+    content: "⭐";
 }
 
 .cv-section a {
@@ -196,40 +212,6 @@ body {
     font-weight: bold;
     margin-bottom: 1rem;
 }
-
-/* Media Queries para diseño responsive en móviles y tablets */
-@media (max-width: 768px) {
-    .header-nav {
-        flex-direction: column;
-        text-align: center;
-        padding: 1rem;
-    }
-    .header-nav .nav-links {
-        margin-top: 1rem;
-    }
-    .header-nav .nav-links a {
-        margin: 0 0.5rem;
-    }
-    .main-content {
-        flex-direction: column;
-        align-items: center;
-        padding: 2rem 1rem;
-    }
-    .left-column, .right-column {
-        width: 100%;
-        max-width: 100%;
-    }
-}
-
-.name {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-
-
 
 /* Estilo para la sección de proyectos */
 .projects-section {
@@ -311,14 +293,122 @@ body {
     text-decoration: underline;
 }
 
-/* El diseño de Grid ya es responsive, pero mantenemos este media query como fallback si es necesario */
+/* Botón hamburguesa para móvil */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    gap: 4px;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+/* Media Queries para diseño responsive en móviles y tablets */
 @media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+    
+    .header-nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #1a0017;
+        flex-direction: column;
+        gap: 0;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        padding: 1rem 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .header-nav .nav-links a {
+        margin: 0;
+        font-size: 1.1rem;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .header-nav .nav-links a:last-child {
+        border-bottom: none;
+    }
+    
+    .header-nav .nav-links a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-bottom: none;
+    }
+    
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 2.5rem 0.5rem 0 0.5rem;
+        gap: 2rem;
+    }
+    .left-column, .right-column {
+        width: 100%;
+        max-width: 100%;
+    }
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+    .name {
+        font-size: 1.5rem;
+    }
+    .job-title {
+        font-size: 1rem;
+    }
+    .about-me {
+        font-size: 0.98rem;
+        max-width: 100%;
+    }
+    .cv-section h2 {
+        font-size: 1.2rem;
+    }
     .projects-container {
-        /* Con Grid, los elementos se apilarán automáticamente, pero puedes forzar el comportamiento si lo deseas */
         grid-template-columns: 1fr;
+        padding: 0;
     }
     .project-card {
-        width: 90%; /* Ocupa casi todo el ancho disponible */
-        margin: 0 auto 2rem; /* Centra la tarjeta y añade espacio inferior */
+        width: 98%;
+        margin: 0 auto 2rem;
+        max-width: 100%;
+    }
+    .project-image {
+        height: 160px;
+    }
+    .project-info h3 {
+        font-size: 1.1rem;
+    }
+    .project-info p {
+        font-size: 0.98rem;
     }
 }
