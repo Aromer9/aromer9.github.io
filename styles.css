@@ -1,22 +1,10 @@
 /* Estilos generales del cuerpo y fuente */
-:root {
-    --bg: #f7f7f8;
-    --text: #1f2937;
-    --muted: #6b7280;
-    --primary: #6d28d9;
-    --primary-contrast: #ffffff;
-    --surface: #ffffff;
-    --surface-alt: #f1f5f9;
-    --radius: 12px;
-    --shadow: 0 8px 24px rgba(16, 24, 40, 0.08);
-    --navbar-bg: #1a0017;
-}
 body {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--bg);
-    color: var(--text);
+    background-color: #f4f4f4;
+    color: #333;
     line-height: 1.6;
 }
 
@@ -26,7 +14,7 @@ body {
     top: 0;          /* Lo fija en la parte superior de la ventana del navegador */
     width: 100%;     /* Asegura que ocupe todo el ancho de la pantalla */
     z-index: 1000;   /* Asegura que esté por encima de otros elementos en la página */
-    background-color: var(--navbar-bg);
+    background-color: #1a0017;
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -51,69 +39,6 @@ body {
 
 .header-nav .nav-links a:hover {
     border-bottom: 2px solid #fff;
-}
-
-/* Hero */
-.hero {
-    background: linear-gradient(180deg, #1a0017 0%, #3b0f3f 100%);
-    color: #ffffff;
-    padding: 8rem 0 4rem;
-    text-align: center;
-}
-
-.hero-title {
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin: 0 0 0.5rem;
-}
-
-.hero-subtitle {
-    font-size: 1.125rem;
-    color: #e5e7eb;
-    margin: 0 auto 1.5rem;
-    max-width: 720px;
-}
-
-.hero-cta {
-    display: inline-flex;
-    gap: 0.75rem;
-    align-items: center;
-    justify-content: center;
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.75rem 1.25rem;
-    border-radius: 9999px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
-    box-shadow: var(--shadow);
-}
-
-.btn:hover {
-    transform: translateY(-1px);
-}
-
-.btn--primary {
-    background-color: var(--primary);
-    color: var(--primary-contrast);
-}
-
-.btn--primary:hover {
-    background-color: #5b21b6;
-}
-
-.btn--ghost {
-    background-color: rgba(255, 255, 255, 0.08);
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.btn--ghost:hover {
-    background-color: rgba(255, 255, 255, 0.16);
 }
 
 .header-nav .dropdown {
@@ -151,7 +76,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 4rem 2rem;
+    padding: 7rem 2rem;
     gap: 3rem;
 }
 
@@ -388,16 +313,6 @@ body {
 
 /* El diseño de Grid ya es responsive, pero mantenemos este media query como fallback si es necesario */
 @media (max-width: 768px) {
-    .hero {
-        padding: 7rem 1rem 3rem;
-    }
-    .hero-title {
-        font-size: 1.8rem;
-    }
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-
     .hamburger-menu {
         display: flex;
     }
@@ -414,7 +329,7 @@ body {
         top: 70px;
         left: 0;
         width: 100%;
-        background-color: var(--navbar-bg);
+        background-color: #1a0017;
         flex-direction: column;
         gap: 0;
         display: none;
